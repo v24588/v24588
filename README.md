@@ -39,13 +39,11 @@ Point cameras at moving objects → computer says "that's the thing" → count g
 
 ## 📌 Pinned Projects
 
-**Most of my best work is private** (client projects, industrial floors, NDAs). Here's what I can show:
+**Most of my best work is private**
 
 | Project | Stack | Status |
 |---------|-------|--------|
 | **warehouse-vision** | YOLOv8 · ByteTrack · OpenCV | Active |
-| **web-ui-test-automation** | Selenium · Python | Active |
-| **awesome-generative** | Documentation | Reference |
 
 > Want to see the good stuff? [Ask me about it.](https://github.com/v24588)
 
