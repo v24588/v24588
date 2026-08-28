@@ -15,7 +15,7 @@ Point cameras at moving objects → computer says "that's the thing" → count g
 | Capability | Impact |
 |-----------|--------|
 | **Object Detection** | Boxes, pallets, people, products—whatever moves |
-| **Audit Trail** | Turn "trust me bro" into documented proof |
+| **Audit Trail** | Turn "Cross my heart" into documented proof |
 | **Multi-Feed Scaling** | Squeeze more cameras per GPU without losing your mind |
 
 ---
