@@ -62,7 +62,7 @@ Point cameras at moving objects → computer says "that's the thing" → count g
 **Current Activity:**
 - 🎯 Scaling from single-line to multi-warehouse deployment
 - 🔬 Optimizing GPU utilization for multi-feed inference
-- 📈 Building production-grade audit systems
+- 📈 Building industry-grade audit systems
 
 ---
 
