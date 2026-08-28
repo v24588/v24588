@@ -1,6 +1,6 @@
 # hi, i'm santosh 👋
 
-I teach cameras to count things — boxes, pallets, people, product, whatever's moving — so humans don't have to squint at a conveyor belt all day.
+I teach cameras to count things — boxes, pallets, people, product, whatever's moving — so humans don't have to squint at warehouse footage all day.
 
 ```python
 if obj.crosses(tripwire):
@@ -18,7 +18,7 @@ if obj.crosses(tripwire):
 
 - 🗂️ OneDrive + active codebase = files that lie to you. Local folders only, now and forever.
 - 🎥 A cheap camera with great lighting beats an expensive camera with bad lighting, every time.
-- 🐌 25 fps is overkill for counting stuff on a conveyor. Turn it down, fit more cameras per GPU, thank me later.
+- 🐌 25 fps is overkill for counting stuff in a warehouse. Turn it down, fit more cameras per GPU, thank me later.
 - 🖐️ Sometimes the model isn't wrong — a human's hand is just in the way. Blame physics, not the neural net.
 
 ## stack
