@@ -121,7 +121,7 @@ Interested in computer vision, object detection, or industrial automation? Here'
 
 ## Current Mission
 
-Scaling from "it works on one line/warehouse" to "it works on multiple"—a completely different and much more annoying problem.
+Scaling from "it works on one line/warehouse" to "it works on multiple" a completely different and much more annoying problem.
 
 The good news? It's solvable. The bad news? There's a GPU somewhere having an existential crisis about it.
 
