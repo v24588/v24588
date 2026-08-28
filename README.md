@@ -1,16 +1,16 @@
 # hi, i'm santosh 👋
 
-I teach cameras to count boxes so humans don't have to squint at a conveyor belt all day.
+I teach cameras to count things — boxes, pallets, people, product, whatever's moving — so humans don't have to squint at a conveyor belt all day.
 
 ```python
-if box.crosses(tripwire):
+if obj.crosses(tripwire):
     count += 1
     # ship it
 ```
 
 ## what i actually do
 
-- Point cameras at moving objects → make computer say "yes that is a box" → make count go up 📦⬆️
+- Point cameras at moving objects → make computer say "yes, that's the thing I'm counting" (a box, a pallet, a person, whatever) → make count go up 🔢⬆️
 - Turn "trust me bro, we counted them" into an actual audit trail
 - Argue with GPUs about how many camera feeds they can watch at once (spoiler: fewer than you'd hope)
 
