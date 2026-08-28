@@ -1,6 +1,6 @@
 # hi, i'm santosh 👋
 
-I teach cameras to count things — boxes, pallets, people, product, whatever's moving — so humans don't have to squint at warehouse footage all day.
+I teach cameras to count things say boxes, pallets, people, product, whatever's moving, so humans don't have to squint at warehouse footage all day.
 
 ```python
 if obj.crosses(tripwire):
@@ -23,7 +23,7 @@ if obj.crosses(tripwire):
 
 ## stack
 
-`Python` · `YOLOv8` · `OpenCV` · `ByteTrack` · `Label Studio` · a concerning number of terminal tabs
+`Python` · `YOLOv8` · `OpenCV` · `ByteTrack` · `Label Studio` · `Roboflow` · a concerning number of terminal tabs
 
 ## status
 
