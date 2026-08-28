@@ -1,34 +1,52 @@
-# hi, i'm santosh 👋
+# 👋 Santosh | Real-Time Detection & Tracking
 
-I teach cameras to count things say boxes, pallets, people, product, whatever's moving, so humans don't have to squint at warehouse footage all day.
+**Teaching cameras to count things so humans don't have to squint at warehouse footage all day.**
 
-```python
-if obj.crosses(tripwire):
-    count += 1
-    # ship it
+[![Python](https://img.shields.io/badge/Python-3.9+-3776ab?logo=python&logoColor=white)](https://www.python.org/)
+[![YOLOv8](https://img.shields.io/badge/YOLOv8-Powered-FF6D00)](https://github.com/ultralytics/ultralytics)
+[![Status](https://img.shields.io/badge/Status-Scaling%20Up-green)](https://github.com/v24588)
+
+---
+
+## What I Build
+
+Point cameras at moving objects → computer says "that's the thing" → count goes up 🔢⬆️
+
+| Capability | Impact |
+|-----------|--------|
+| **Object Detection** | Boxes, pallets, people, products—whatever moves |
+| **Audit Trail** | Turn "trust me bro" into documented proof |
+| **Multi-Feed Scaling** | Squeeze more cameras per GPU without losing your mind |
+
+---
+
+## The Hard-Won Lessons
+
+- 🗂️ **Local files only.** OneDrive + active codebase = files that lie to you.
+- 🎥 **Lighting > Gear.** A cheap camera with great lighting beats expensive gear with bad lighting, every time.
+- 🐌 **Lower your FPS.** 25 fps is overkill for warehouse counting. Drop it, fit more cameras per GPU.
+- 🖐️ **Physics > Models.** Sometimes the model isn't wrong—a human's hand is just in the way.
+
+---
+
+## Stack
+
+```
+Python · YOLOv8 · OpenCV · ByteTrack · Label Studio · Roboflow
 ```
 
-## what i actually do
+A concerning number of terminal tabs not included.
 
-- Point cameras at moving objects → make computer say "yes, that's the thing I'm counting" (a box, a pallet, a person, whatever) → make count go up 🔢⬆️
-- Turn "trust me bro, we counted them" into an actual audit trail
-- Argue with GPUs about how many camera feeds they can watch at once (spoiler: fewer than you'd hope)
+---
 
-## things i have learned the hard way
+## Current Mission
 
-- 🗂️ OneDrive + active codebase = files that lie to you. Local folders only, now and forever.
-- 🎥 A cheap camera with great lighting beats an expensive camera with bad lighting, every time.
-- 🐌 25 fps is overkill for counting stuff in a warehouse. Turn it down, fit more cameras per GPU, thank me later.
-- 🖐️ Sometimes the model isn't wrong: a human's hand is just in the way. Blame physics, not the neural net.
+Scaling from "it works on one line/warehouse" to "it works on multiple"—a completely different and much more annoying problem.
 
-## stack
+---
 
-`Python` · `YOLOv8` · `OpenCV` · `ByteTrack` · `Label Studio` · `Roboflow` · a concerning number of terminal tabs
+## The Private Stuff
 
-## status
+Most of my best work is private. Client projects, industrial floors, NDAs, the usual suspects. 
 
-Currently scaling from "it works on one line/ warehouse" to "it works on multiple," which is a completely different and much more annoying problem.
-
-## about the private repos
-
-Yes, most of my good stuff is private. Client work, industrial floor, ndas, the usual. I promise it's cooler than this README makes it sound, ask me about it.
+**It's cooler than this README makes it sound.** [Ask me about it.](https://github.com/v24588)
