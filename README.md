@@ -14,7 +14,7 @@ Point cameras at moving objects → computer says "that's the thing" → count g
 
 | Capability | Impact |
 |-----------|--------|
-| **Object Detection** | Boxes, pallets, people, products — whatever moves |
+| **Object Detection** | Boxes, pallets, people, products, whatever moves |
 | **Audit Trail** | Turn "cross my heart" into documented proof |
 | **Multi-Feed Scaling** | Squeeze more cameras per GPU without losing your mind |
 
@@ -26,7 +26,7 @@ It started with a spreadsheet problem wearing a computer vision costume.
 
 Somewhere in a production facility, humans were standing at conveyor lines, manually clicking a counter every time a box went by. It worked. It also didn't scale, didn't leave much of an audit trail, and quietly burned a lot of hours that could go somewhere more useful.
 
-The pitch was simple: point a camera at the line, let software do the counting, keep humans doing things humans are actually good at. The catch was that "simple" and "simple to build" are not the same sentence — and this was a part-time, mostly-solo build, squeezed in alongside everything else on the plate.
+The pitch was simple: point a camera at the line, let software do the counting, keep humans doing things humans are actually good at. The catch was that "simple" and "simple to build" are not the same sentence, and this was a part-time, mostly-solo build, squeezed in alongside everything else on the plate.
 
 No CV team. No dedicated infra. Just a GPU, a camera, a growing respect for how much can go wrong between "the box moved" and "the count is right."
 
@@ -40,14 +40,14 @@ No CV team. No dedicated infra. Just a GPU, a camera, a growing respect for how 
 
 Stood up the first pipeline: top-down camera → YOLOv8 detection → ByteTrack to follow each box across frames so it only gets counted once. Got it running live on one conveyor line. Watching a bounding box lock onto a moving box for the first time felt like the whole project had a pulse.
 
-**Outcome:** proof that "cameras counting boxes" wasn't a science project — it was a real, shippable idea.
+**Outcome:** proof that "cameras counting boxes" wasn't a science project. It was a real, shippable idea.
 </details>
 
 <details>
 <summary><b>Chapter 2 — The Great Accuracy Chase</b></summary>
 <br>
 
-Then came the fun part: the numbers didn't match the manual counts. Classic instinct says "fix the model." So — more training data, more label corrections, more tuning.
+Then came the fun part: the numbers didn't match the manual counts. Classic instinct says "fix the model." So: more training data, more label corrections, more tuning.
 
 Eventually the real culprit showed up: at the pick point, operator hands were physically blocking the lens right as boxes passed. The model was never wrong. The camera just couldn't see what it wasn't allowed to see.
 
@@ -58,7 +58,7 @@ Eventually the real culprit showed up: at the pick point, operator hands were ph
 <summary><b>Chapter 3 — The OneDrive Betrayal</b></summary>
 <br>
 
-Somewhere in the middle of threshold tuning, files started quietly lying — edits wouldn't reflect, reads returned stale data, and debugging turned into "wait, is this even the code I just saved?" Root cause: OneDrive sync fighting the local dev workflow behind the scenes.
+Somewhere in the middle of threshold tuning, files started quietly lying: edits wouldn't reflect, reads returned stale data, and debugging turned into "wait, is this even the code I just saved?" Root cause: OneDrive sync fighting the local dev workflow behind the scenes.
 
 **Fix:** moved the entire codebase to a plain local path. Lesson tattooed on the brain: active development and cloud-synced folders do not mix.
 </details>
@@ -67,7 +67,7 @@ Somewhere in the middle of threshold tuning, files started quietly lying — edi
 <summary><b>Chapter 4 — Scaling Math</b></summary>
 <br>
 
-One line working well raised the obvious next question: what about all sixteen? Turns out the GPU, not the CPU, is what actually limits how many camera streams you can run at once. The unlock: warehouse counting doesn't need 25–30 fps — it needs enough frames to not miss a box. Dropping frame rate multiplied how many cameras a single GPU could carry, for free.
+One line working well raised the obvious next question: what about all sixteen? Turns out the GPU, not the CPU, is what actually limits how many camera streams you can run at once. The unlock: warehouse counting doesn't need 25–30 fps; it needs enough frames to not miss a box. Dropping frame rate multiplied how many cameras a single GPU could carry, for free.
 
 **Outcome:** a real scaling path instead of "buy a GPU per camera and pray."
 </details>
@@ -76,7 +76,7 @@ One line working well raised the obvious next question: what about all sixteen? 
 <summary><b>Chapter 5 — Beyond Boxes</b></summary>
 <br>
 
-With counting proven out, the same instincts — reliable capture, don't trust the stream blindly, validate against saved frames before going live — got pointed at a new problem: reading pallet labels at dock doors with nothing but a phone camera and some decode software, before spending a dollar on hardware.
+With counting proven out, the same instincts (reliable capture, don't trust the stream blindly, validate against saved frames before going live) got pointed at a new problem: reading pallet labels at dock doors with nothing but a phone camera and some decode software, before spending a dollar on hardware.
 
 **Philosophy carried forward:** prove it cheap before you build it expensive.
 </details>
@@ -106,7 +106,7 @@ With counting proven out, the same instincts — reliable capture, don't trust t
 
 | Project | Stack | Status |
 |---------|-------|--------|
-| **warehouse-vision** | YOLOv8 · ByteTrack · OpenCV | Active — live on production line(s), scaling to more |
+| **warehouse-vision** | YOLOv8 · ByteTrack · OpenCV | Active, live on production line(s), scaling to more |
 | **dock-scanning** | Barcode/label decode pipelines | Phase 0 validation |
 
 > Want to see the good stuff? [Ask me about it.](https://github.com/v24588)
@@ -136,7 +136,7 @@ With counting proven out, the same instincts — reliable capture, don't trust t
 - ✅ Root-caused an accuracy gap to a hardware/mounting issue instead of burning weeks retraining a model that was never broken
 - ✅ Built a scaling architecture designed to survive a facility layout change before it even happens
 - ✅ Carried the same reliability patterns (stream handling, validation discipline) into a second, unrelated CV problem
-- ✅ Did all of it part-time, mostly solo, without a formal CS background — just stubbornness and a decent GPU
+- ✅ Did all of it part-time, mostly solo, without a formal CS background, just stubbornness and a decent GPU
 
 ---
 
@@ -145,9 +145,9 @@ With counting proven out, the same instincts — reliable capture, don't trust t
 - 🗂️ **Local files only.** OneDrive + active codebase = files that lie to you.
 - 🎥 **Lighting > Gear.** A cheap camera with great lighting beats expensive gear with bad lighting, every time.
 - 🐌 **Lower your FPS.** 25 fps is overkill for warehouse counting. Drop it, fit more cameras per GPU.
-- 🖐️ **Physics > Models.** Sometimes the model isn't wrong — a human's hand is just in the way.
+- 🖐️ **Physics > Models.** Sometimes the model isn't wrong: a human's hand is just in the way.
 - 💸 **Prove it cheap first.** Validate the concept on a phone and a laptop before buying a single piece of hardware.
-- 🔁 **Isolate your variables.** Test model accuracy on saved frames before blaming a live camera stream — they're different failure modes wearing the same "it's wrong" costume.
+- 🔁 **Isolate your variables.** Test model accuracy on saved frames before blaming a live camera stream; they're different failure modes wearing the same "it's wrong" costume.
 
 ---
 
@@ -198,7 +198,7 @@ Interested in computer vision, object detection, or industrial automation? Here'
 
 ## Current Mission
 
-Scaling from "it works on one line" to "it works on sixteen" — a completely different and much more annoying problem.
+Scaling from "it works on one line" to "it works on sixteen": a completely different and much more annoying problem.
 
 The good news? It's solvable. The bad news? There's a GPU somewhere having an existential crisis about it.
 
