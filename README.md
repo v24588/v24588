@@ -1,6 +1,6 @@
 # 👋 Santosh | Real-Time Detection & Tracking
 
-**Teaching cameras to count things so humans don't have to squint at warehouse footage all day.**
+**Teaching cameras to count things so humans don't have to squint at footage all day.**
 
 [![Python](https://img.shields.io/badge/Python-3.9+-3776ab?logo=python&logoColor=white)](https://www.python.org/)
 [![YOLOv8](https://img.shields.io/badge/YOLOv8-Powered-FF6D00)](https://github.com/ultralytics/ultralytics)
