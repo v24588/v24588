@@ -1,6 +1,6 @@
 # Santosh
 
-Computer vision engineer building real-time detection and tracking for industrial environments.
+Computer vision enthusiast building real-time detection and tracking for industrial environments.
 
 I point cameras at moving objects on the floor — boxes, pallets, people, product — and turn that into a count and a record. The point is reliable evidence, so a team is not standing on a line clicking a counter or scrubbing footage after the fact.
 
