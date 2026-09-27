@@ -1,6 +1,6 @@
 # Santosh
 
-Computer vision enthusiast. I build real-time detection and tracking systems for industrial environments — mostly cameras, counting, and tracking objects on production floors.
+Computer vision enthusiast. I build real-time detection and tracking systems for industrial environments - mostly cameras, counting, and tracking objects on production floors.
 
 Built part-time and mostly solo — a GPU, a camera, and whatever time was left around other work.
 
